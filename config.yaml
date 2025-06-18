@@ -1,0 +1,16 @@
+character_config:
+  agent_config:
+    llm_configs:
+      ollama_llm:           # ← 脚本根据这个键去取参数
+        base_url: "http://localhost:11434/v1"   # Ollama 的 OpenAI-兼容端口
+        model: "deepseek-r1"                  # 你已下载的模型名
+        temperature: 1.0                        # 采样温度，0–2
+        keep_alive: -1                          # -1 = 永驻显存
+        unload_at_exit: true                    # 脚本退出时是否调用 unload
+
+
+prompt_config:
+  system_prompt: |
+  style_log: "style.log" 
+  tail_prompt: |
+    
